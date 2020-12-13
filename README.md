@@ -19,8 +19,8 @@ Once the Project is configured with the above dependencies and targetted runtime
 
 Add devices : 
 -----
-*Data to be sent from POSTMAN via POST request : 
---
+* Data to be sent from POSTMAN via POST request : 
+
 *Input Sent : 
 CREATE /devices
 content-type : application/json
@@ -32,8 +32,8 @@ content-type : application/json
 
 Add Connections : 
 ----
-*Data to be sent from POSTMAN via POST request : 
---
+* Data to be sent from POSTMAN via POST request : 
+
 *Input Sent : 
 CREATE /connections
 content-type : application/json
@@ -45,8 +45,8 @@ content-type : application/json
 
 Fetch Devices : 
 ---
-*Data to be sent from POSTMAN via POST request : 
---
+* Data to be sent from POSTMAN via POST request : 
+
 *Input Sent : 
 FETCH /devices
 
@@ -63,8 +63,8 @@ FETCH /devices
 
 Fetch Routes : 
 ---
-*Data to be sent from POSTMAN via POST request :
---
+* Data to be sent from POSTMAN via POST request :
+
 *Input Sent : 
 FETCH /info-routes?from=A1&to=A4
 
@@ -74,8 +74,8 @@ FETCH /info-routes?from=A1&to=A4
 
 Modify Signal Strength : 
 ---
-*Data to be sent from POSTMAN via POST request : 
---
+* Data to be sent from POSTMAN via POST request : 
+
 *Input Sent : 
 MODIFY /devices/A1/strength
 content-type : application/json
