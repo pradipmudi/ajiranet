@@ -19,38 +19,77 @@ Once the Project is configured with the above dependencies and targetted runtime
 
 Add devices : 
 -----
-* Data to be sent from POSTMAN via POST request : 
-
+*Data to be sent from POSTMAN via POST request : 
+--
+*Input Sent : 
 CREATE /devices
 content-type : application/json
 {"type" : "COMPUTER", "name" : "A1"}
 
+*Output:
+{"msg": "Successfully added A1"}
+
+
 Add Connections : 
 ----
-* Data to be sent from POSTMAN via POST request : 
-
+*Data to be sent from POSTMAN via POST request : 
+--
+*Input Sent : 
 CREATE /connections
 content-type : application/json
 {"source" : "A1", "targets" : ["A2", "A3"]}
 
+*Output:
+{"msg": "Successfully connected"}
+
+
 Fetch Devices : 
 ---
-* Data to be sent from POSTMAN via POST request : 
-
+*Data to be sent from POSTMAN via POST request : 
+--
+*Input Sent : 
 FETCH /devices
+
+*Output
+{
+"devices":[
+{
+"type":"COMPUTER",
+"name":"A1"
+}
+]
+}
+
 
 Fetch Routes : 
 ---
-* Data to be sent from POSTMAN via POST request : 
-
+*Data to be sent from POSTMAN via POST request :
+--
+*Input Sent : 
 FETCH /info-routes?from=A1&to=A4
+
+*Output : 
+{"msg": "Route is A1->A1}
 
 
 Modify Signal Strength : 
 ---
-* Data to be sent from POSTMAN via POST request : 
-
+*Data to be sent from POSTMAN via POST request : 
+--
+*Input Sent : 
 MODIFY /devices/A1/strength
 content-type : application/json
 {"value": 2}
 
+
+*Output : 
+{"msg": "Successfully defined strength"}
+
+*Input Sent : 
+MODIFY /devices/A1/strength
+content-type : application/json
+{"value": -2}
+
+
+*Output : 
+{"msg": "Negative Signal strenth cannot be assigned"}
