@@ -15,42 +15,65 @@ Requirements to run the project :
 How To run the project? 
 ---
 Once the Project is configured with the above dependencies and targetted runtime, just make the project Run with "Run on server" option and you are all set.
+Data to be sent from POSTMAN via POST request.
 
 
 Add devices : 
 -----
-* Data to be sent from POSTMAN via POST request : 
 
-*Input Sent : 
+* Input Sent : 
+
 CREATE /devices
 content-type : application/json
 {"type" : "COMPUTER", "name" : "A1"}
 
-*Output:
+* Output:
+
 {"msg": "Successfully added A1"}
+
+
+* Input Sent : 
+
+CREATE /connections
+
+* Output:
+
+{"msg": "Invalid command."}
+
 
 
 Add Connections : 
 ----
-* Data to be sent from POSTMAN via POST request : 
 
-*Input Sent : 
+* Input Sent : 
+
 CREATE /connections
 content-type : application/json
 {"source" : "A1", "targets" : ["A2", "A3"]}
 
-*Output:
+* Output:
+
 {"msg": "Successfully connected"}
+
+
+* Input Sent : 
+
+CREATE /connections
+
+* Output:
+
+{"msg": "Invalid command syntax"}
 
 
 Fetch Devices : 
 ---
-* Data to be sent from POSTMAN via POST request : 
 
-*Input Sent : 
+* Input Sent : 
+
 FETCH /devices
 
-*Output
+* Output
+
 {
 "devices":[
 {
@@ -63,33 +86,38 @@ FETCH /devices
 
 Fetch Routes : 
 ---
-* Data to be sent from POSTMAN via POST request :
 
-*Input Sent : 
+* Input Sent : 
+
 FETCH /info-routes?from=A1&to=A4
 
-*Output : 
+* Output : 
+
 {"msg": "Route is A1->A1}
 
 
 Modify Signal Strength : 
 ---
-* Data to be sent from POSTMAN via POST request : 
 
-*Input Sent : 
+* Input Sent : 
+
 MODIFY /devices/A1/strength
 content-type : application/json
 {"value": 2}
 
 
-*Output : 
+* Output : 
+
 {"msg": "Successfully defined strength"}
 
-*Input Sent : 
+
+* Input Sent : 
+
 MODIFY /devices/A1/strength
 content-type : application/json
 {"value": -2}
 
 
-*Output : 
+* Output : 
+
 {"msg": "Negative Signal strenth cannot be assigned"}
