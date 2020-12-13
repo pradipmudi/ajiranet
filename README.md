@@ -89,7 +89,7 @@ Fetch Routes :
 
 * Input Sent : 
 
-FETCH /info-routes?from=A1&to=A4
+FETCH /info-routes?from=A1&to=A1
 
 * Output : 
 
