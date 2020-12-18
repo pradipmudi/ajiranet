@@ -17,6 +17,12 @@ How To run the project?
 Once the Project is configured with the above dependencies and targetted runtime, just make the project Run with "Run on server" option and you are all set.
 Data to be sent from POSTMAN via POST request.
 
+POSTMAN Configuration :
+--
+* Destination URL : http://host:port/ajiranet/process
+* Method : POST
+* Data Body format : Raw
+
 
 Add devices : 
 -----
